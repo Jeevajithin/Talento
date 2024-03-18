@@ -24,7 +24,7 @@ if ($count3 > 0) {
         $data[] = array('id' => $row['id'],
             'name' => ($row['id'] == null) ? "" : $row['name'],
             'email' => ($row['email'] == null) ? "" : $row['email'],
-            'reset_link' => "http://campus.sicsglobal.co.in/Project/talento/admin/api_2/password_reset.php?token=" . $randomNumber
+            'reset_link' => "https://talento.srishticampus.com/admin/api_2/password_reset.php?token=" . $randomNumber
         );
 
         $sql = "INSERT INTO `password_reset` (`user_id`, `token`, `expires_at`) VALUES ('{$row['id']}', '$randomNumber','$new_time')";
